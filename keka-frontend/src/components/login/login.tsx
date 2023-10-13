@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import './login.css'
 
 const Login = () => {
@@ -28,7 +29,7 @@ const Login = () => {
                 data-val-required="Please enter a valid username or work email address."
                 maxLength="80"
                 name="UserName"
-                value=""
+                // value=""
                 aria-describedby="email-error"
                 aria-invalid="false"
               />
@@ -67,7 +68,7 @@ const Login = () => {
                   <button className="login-button bg-hover-btn" name="provider" value="UserName">
                     <div className="d-flex align-items-center justify-content-center">
                       <img src="https://cdn.kekastatic.net/login/v/M161_2023.10.09.1/images/logos/keka.svg" alt="Keka username" />
-                      <p className="ps-2">Keka username</p>
+                    l<Link href={'/keka-login'}>  <p className="ps-2">Keka username</p></Link>
                     </div>
                   </button>
                 </div>
