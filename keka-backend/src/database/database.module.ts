@@ -1,10 +1,15 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-    imports:[
-        MongooseModule.forRoot(`mongodb+srv://kekaUser:kekaPass@atlascluster.lb71le6.mongodb.net/kekaDBretryWrites=true&w=majority`)
-    ],
-    exports:[MongooseModule]
+    imports: [MongooseModule.forRootAsync({
+        imports: [ConfigModule],
+        useFactory: (configService: ConfigService) => ({
+          uri: configService.get<string>('MONGODBURL'),
+        }),
+        inject: [ConfigService],
+      })],
+    exports:[MongooseModule],
 })
 export class DatabaseModule {}
