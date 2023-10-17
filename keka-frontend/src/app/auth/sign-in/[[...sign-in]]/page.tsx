@@ -1,29 +1,33 @@
+// pages/index.js
+
 import { SignIn } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import styles from '../styles/tailwind.css';
 
 export default function Page() {
   return (
-    <div className="flex">
-      <div className="">
+    <div className="main-container flex h-screen ">
+      <div className="relative w-full" style={{ width: "calc(100vw - 500px)" }}>
         <Image
           src="https://cdn.kekastatic.net/login/v/M161_2023.10.09.1/images/login-image.jpg"
           alt="Scenery"
+          layout="fixed"
           width={1500}
           height={0}
+          objectFit="cover"
+          className="object-cover w-full h-full"
         />
       </div>
-      <div className="flex-2 bg-white p-4">
-        <div className="mx-auto max-w-sm">
+
+      <div className="p-12 ml-15 ">
+        <div className="">
           <SignIn
             appearance={{
               elements: {
                 formButtonPrimary:
                   "bg-blue-400 hover:bg-blue-400 text-sm normal-case font-normal p-5",
-                formFieldInput: {
-                  padding: "18px",
-                  fontSize: "18px",
-                },
+                formFieldInput: "p-18 text-18",
               },
               layout: {
                 socialButtonsPlacement: "bottom",
@@ -33,7 +37,7 @@ export default function Page() {
             }}
           />
         </div>
-        <div className="flex">
+        <div className="flex w-77 p-15">
           <Image
             src="https://cdn.kekastatic.net/login/v/M161_2023.10.09.1/images/keka-logo-black.svg"
             alt="keka"
@@ -52,6 +56,7 @@ export default function Page() {
           </p>
         </div>
       </div>
+
     </div>
   );
 }
