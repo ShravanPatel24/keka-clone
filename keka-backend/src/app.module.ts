@@ -5,6 +5,7 @@ import { DatabaseModule } from './database/database.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { ConfigModule } from '@nestjs/config';
+import { DashboardFeedModule } from './dashboard-feed/dashboard-feed.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
     }),
     ConfigModule,
+    DashboardFeedModule,
   ],
   controllers: [AppController],
   providers: [AppService],

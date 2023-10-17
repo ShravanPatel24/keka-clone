@@ -1,0 +1,44 @@
+{
+  "POST": {
+    "title": "string",
+    "image": "Link",
+    "like": "Number",
+    "comments": [],
+    "createdAt": "Date",
+    "updatedAt": "Date",
+    "deletedAt": "Date",
+    "category": {
+      "type": "String",
+      "enum": ["Organisational", "Software development"]
+    }
+  },
+  "Announcement": {
+    "title": "string",
+    "details": "string",
+    "like": "Number",
+    "comments": [],
+    "notifyEmployees": "Boolean",
+    "requireAcknowledgment": "Boolean",
+    "hideAfter": "Boolean",
+    "category": {
+      "type": "String",
+      "enum": ["Organisational", "Software development"]
+    }
+  },
+  "Poll": {
+    "pollTitle": "string",
+    "options": [],
+    "like": "Number",
+    "comments": [],
+    "notifyEmployees": "Boolean",
+    "anonymousPoll": "Boolean",
+    "pollEnded": "Date",
+    "category": { "type": "String", "enum": ["Organisational", "Software development"] }
+  },
+  "Praise": {
+    "praiseUsername": "string",
+    "praiseText": "string",
+    "tagBadge": "String",
+    "category": { "type": "String", "enum": ["Organisational", "Software development"] }
+  }
+}
