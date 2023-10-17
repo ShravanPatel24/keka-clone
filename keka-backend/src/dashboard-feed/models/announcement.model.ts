@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 export type PostDocument = Announcement & Document;
-@Schema({ timestamps: true })
+@Schema()
 export class Announcement {
   @Prop()
   title: string;
@@ -25,6 +25,12 @@ export class Announcement {
 
   @Prop({ type: String, enum: ['Organisational', 'Software development'] })
   category: string;
+
+  @Prop({ type: Date, default: Date.now })
+  createdAt: Date;
+
+  @Prop({ type: Date, default: null })
+  updatedAt: Date;
 }
 
 export const AnnouncementSchema = SchemaFactory.createForClass(Announcement);

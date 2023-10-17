@@ -36,6 +36,11 @@ export class DashboardFeedService {
     const polldata = await this.PollModel.find();
     const praisedata = await this.PraiseModel.find();
     const alldata =[...postdata,...announcedata,...polldata,...praisedata] 
+    alldata.sort((a, b) => {
+      const timestampA = a.updatedAt || a.createdAt;
+      const timestampB = b.updatedAt || b.createdAt;
+      return timestampB.getTime() - timestampA.getTime();
+    });
     return alldata;
   }
 }
