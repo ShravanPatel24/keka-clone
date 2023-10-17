@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-
+export type PostDocument = Poll & Document;
 @Schema({ timestamps: true })
 export class Poll {
   @Prop()
