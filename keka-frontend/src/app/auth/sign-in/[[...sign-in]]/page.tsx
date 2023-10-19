@@ -3,7 +3,6 @@
 import { SignIn } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import styles from '../styles/tailwind.css';
 
 export default function Page() {
   return (
