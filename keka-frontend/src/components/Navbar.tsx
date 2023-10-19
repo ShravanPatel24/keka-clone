@@ -1,7 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import "./header.css";
-const UIPage = () => {
+const Navbar = () => {
   return (
     <div className="header">
         <div className="header-content">
@@ -15,7 +16,7 @@ const UIPage = () => {
               <div className="search-img">
                   <img src="../assets/search-icon.png" alt="searchIcon" />
               </div>
-              <input type="text" id="searchInput" placeholder="Search employees or actions (Ex: Apply Leave, Attendance Approvals"/>
+              <input type="text" className="searchInput" placeholder="Search employees or actions (Ex: Apply Leave, Attendance Approvals"/>
             </div>
             <div className="profile-dection">
               <h2> AMIT KUMAR</h2>
@@ -31,4 +32,4 @@ const UIPage = () => {
   );
 };
 
-export default UIPage;
+export default Navbar;
