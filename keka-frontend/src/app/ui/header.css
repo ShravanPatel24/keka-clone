@@ -1,0 +1,50 @@
+.header{
+/* height: 100px; */
+margin-top: 50px;
+/* background-color: rgb(208, 180, 180); */
+
+}
+.header-content{
+    display: flex;
+    align-items: center;
+}
+.keka-image{
+    color: grey;
+    margin-right: 20px;
+    /* height: 50px; */
+    width: 100px;
+}
+.keka-image img{
+    width: 100%;
+}
+.search-container{
+    padding: 6px 8px;
+    width: 420px;
+    border-radius: 50px;
+    border: 2px solid grey;
+    margin-left: 50px;
+    display: flex;
+}
+.search-img{
+    /* margin-right: 10px; */
+    padding: 0px 10px;
+
+}
+.profile-dection{
+    display: flex;
+    align-items: center;
+    margin-left: 820px;
+}
+.down-img{
+    width: 50px; 
+}
+.profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.profile-pic img{
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}

@@ -1,4 +1,3 @@
-// pages/login.js
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -59,13 +58,10 @@ const Login = () => {
               Continue
             </button>
           </div>
-<div className="keka-img">
-  <img src="" alt="" />
-
-</div>
-          
+          <div className="keka-img">
+            <img src="" alt="" />
+          </div>
         </form>
-        
       </div>
     </div>
   );
