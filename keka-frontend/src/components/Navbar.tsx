@@ -1,7 +1,7 @@
-"use client";
+// "use client";
 import React from "react";
 import Image from "next/image";
-import "./header.css";
+import "./Navbar.css";
 const Navbar = () => {
   return (
     <div className="header">
